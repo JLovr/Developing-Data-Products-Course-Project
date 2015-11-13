@@ -1,0 +1,18 @@
+{
+    "contents" : "\n# This is the user-interface definition of a Shiny web application.\n# You can find out more about building applications with Shiny here:\n#\n# http://shiny.rstudio.com\n#\n\nlibrary(shiny)\n\nshinyUI(fluidPage(\n\n  # Application title\n  titlePanel(\"Male Body Fat Estimator\"),\n\n  # Sidebar with a slider input for number of bins\n  sidebarLayout(\n    sidebarPanel(\n      numericInput(\"Age\",\n                  \"age\",\n                  min = 1,\n                  max = 90,\n                  value = 30),\n      numericInput(\"Height\",\n                   \"Height\",\n                   min = 1,\n                   max = 90,\n                   value = 30),\n      numericInput(\"Weight\",\n                   \"weight\",\n                   min = 1,\n                   max = 90,\n                   value = 30),\n      numericInput(\"Abdomen\",\n                   \"abdomen\",\n                   min = 1,\n                   max = 90,\n                   value = 30)\n    ),\n\n    # Show a plot of the generated distribution\n    mainPanel(\n      plotOutput(\"bfplot\"),\n      output$bf\n    )\n  )\n))\n",
+    "created" : 1447190720637.000,
+    "dirty" : true,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1717242266",
+    "id" : "C00E1348",
+    "lastKnownWriteTime" : 1447190929,
+    "path" : "F:/Coursera/Developing_Data_Products/Course Project/BodyFat_Estimator/ui.R",
+    "project_path" : "ui.R",
+    "properties" : {
+        "notebook_format" : "html_document"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "type" : "r_source"
+}

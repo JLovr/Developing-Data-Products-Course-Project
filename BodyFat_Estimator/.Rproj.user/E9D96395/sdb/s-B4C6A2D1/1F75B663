@@ -1,0 +1,17 @@
+{
+    "contents" : "\n# This is the server logic for a Shiny web application.\n# You can find out more about building applications with Shiny here:\n#\n# http://shiny.rstudio.com\n#\n\nlibrary(shiny)\n\nshinyServer(function(input, output) {\n\n  output$distPlot <- renderPlot({\n\n    library(usingR)\n    library(ggplot2)\n    \n    set.seed(12323)\n    body.fat<-input$bodyfat\n    height<-input$height\n    weight<-input$weight\n    age<-input$age\n    nd<-data.frame(body.fat,age,weight,height,abdomen)\n    rmlist<-c(-42,-48,-76,-96,-182)\n    clist<-c(\"body.fat\",\"age\",\"weight\",\"height\",\"abdomen\")\n    dat<-fat[rmlist,clist]\n    modbf<-lm(body.fat~age+height+weight+abdomen+chest)\n    output$bf<-predict(modbf,newdata=nd)\n    output$bfplot<-plot()\n\n  })\n\n})\n",
+    "created" : 1447190721173.000,
+    "dirty" : true,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "793079088",
+    "id" : "1F75B663",
+    "lastKnownWriteTime" : 1444233442,
+    "path" : "F:/Coursera/Developing_Data_Products/Course Project/BodyFat_Estimator/server.R",
+    "project_path" : "server.R",
+    "properties" : {
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "type" : "r_source"
+}
